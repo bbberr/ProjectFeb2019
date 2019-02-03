@@ -1,0 +1,32 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sideNav mode="over" [disableClose]=true class="width_20">
+    <div class="text-align-right">
+      <button mat-button (click)="sideNav.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <!-- 選單 -->
+    <div>
+      <mat-grid-list cols="1" rowHeight="70px">
+        <mat-grid-tile>
+          <!-- <div> -->
+          <button mat-button class="width_height_100" [routerLink]="['./P1001']" (click)="sideNav.toggle()">第一個頁面</button>
+          <!-- </div> -->
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button mat-button class="width_height_100" [routerLink]="['./P1002']" (click)="sideNav.toggle()"> 第二個頁面</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div>
+      <button mat-button (click)="sideNav.toggle()">
+        <mat-icon>reorder</mat-icon>
+      </button>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

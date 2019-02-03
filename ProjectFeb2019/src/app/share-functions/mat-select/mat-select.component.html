@@ -1,0 +1,7 @@
+<mat-form-field>
+  <mat-select placeholder="Title">
+    <mat-option *ngFor="let title of titles" [value]="title.value">
+      {{title.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
