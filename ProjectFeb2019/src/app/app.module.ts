@@ -10,6 +10,8 @@ import { A1101DropdownMenuModule } from './a1001-dropdown-menu/module/a1101-drop
 import { SideNavModule } from './share-functions/side-nav/module/side-nav.module';
 import { P1001Module } from './p1001/module/p1001.module';
 import { P1002Module } from './p1002/module/p1002.module';
+import { HeadertopComponent } from './share-functions/headertop/headertop.component';
+import { HeadertopModule } from './share-functions/headertop/module/headertop.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { P1002Module } from './p1002/module/p1002.module';
     A1101DropdownMenuModule,
     SideNavModule,
     P1001Module,
-    P1002Module
+    P1002Module,
   ],
   providers: [],
   bootstrap: [AppComponent]

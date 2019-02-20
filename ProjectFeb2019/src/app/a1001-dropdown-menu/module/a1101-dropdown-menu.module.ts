@@ -8,6 +8,7 @@ import { MatSelectModule } from 'src/app/share-functions/mat-select/module/mat-s
 import { SideNavModule } from 'src/app/share-functions/side-nav/module/side-nav.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { P1001Module } from 'src/app/p1001/module/p1001.module';
+import { HeadertopModule } from 'src/app/share-functions/headertop/module/headertop.module';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { P1001Module } from 'src/app/p1001/module/p1001.module';
     ShareMaterialModule,
     MatSelectModule,
     SideNavModule,
+    HeadertopModule
   ],
   declarations: [
     A1001DropdownMenuComponent
