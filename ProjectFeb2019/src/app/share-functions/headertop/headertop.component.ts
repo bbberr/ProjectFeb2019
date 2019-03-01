@@ -36,8 +36,16 @@ export class HeadertopComponent implements OnInit {
   }
   putLinks() {
     this.navLinks.push(
-      { 'path': '/P1001', 'label': 'P1001', 'name': '郵件' },
-      { 'path': '/P1002', 'label': 'P1001', 'name': '設定' }
+      {
+        'path': '#', 'title': '郵件',
+        'menu': [
+          { 'path': '/P1001', 'title': 'Apples' },
+          { 'path': '/P1001', 'title': 'Bananas' },
+          { 'path': '/P1001', 'title': 'Kiwi' },
+          { 'path': '/P1001', 'title': 'Pears' }
+        ]
+      },
+      { 'path': '/P1002', 'title': '設定' }
     );
   }
 
@@ -55,7 +63,7 @@ export class HeadertopComponent implements OnInit {
   }
 
   changeColor(click: any) {
-    console.log(click);
+    // console.log(click);
     if (click) {
       return '#16BA99';
     } else {

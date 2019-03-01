@@ -43,7 +43,7 @@
       [routerLink]="['/admin/'+link.path]"
       routerLinkActive #rla="routerLinkActive"
       [active]="rla.isActive">
-      <b [ngStyle]="{'color': changeColor(rla.isActive)}">{{link.name}}</b>
+      <b [ngStyle]="{'color': changeColor(rla.isActive)}">{{link.title}}</b>
     </a>
   </nav>
 <router-outlet></router-outlet>
