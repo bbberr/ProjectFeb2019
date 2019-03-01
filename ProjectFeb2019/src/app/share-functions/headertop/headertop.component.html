@@ -1,20 +1,49 @@
+<!-- 第一行 -->
 <div class="areaOne">
   <!-- LOGO -->
   <div class="areaOne-logo-img">
     <img src=".\assets\images\esunLogo.png">
-    <!-- <a>E.SUN</a> -->
   </div>
   <div class="areaOne-logo-text">E.SUN</div>
   <!-- USER -->
   <span class="areaOne-align-right20">
-    <img src=".\assets\images\user-16.png"><a class="user-detail">Hi, 王一飛(DS, DSM)</a>
+    <img src=".\assets\images\user-16.png">
+    <a class="user-detail">Hi, 王一飛(DS, DSM)</a>
   </span>
   <!-- LOGIN -->
   <span class="areaOne-align-right5">
-    <img src=".\assets\images\login-16.png"><a class="login-logout">登入</a>
+    <img src=".\assets\images\login-16.png">
+    <a class="login-logout">登入</a>
   </span>
   <!-- LOGOUT -->
   <!-- <span class="areaOne-align-right5">
     <img src=".\assets\images\logout-16.png"><a class="login-logout">登出</a>
   </span> -->
 </div>
+<!-- 第二行 -->
+<div class="areaTwo">
+  <div>
+    <!-- 麵包屑路徑  Breadcrumb-->
+    <div class="breadcrumb-One">Home</div>
+    <div class="breadcrumb-slash">/</div>
+    <div class="breadcrumb-One">路徑一</div>
+    <div class="breadcrumb-slash">/</div>
+    <div class="breadcrumb-Two">路徑二</div>
+    <!-- 功能列的第一層 -->
+    <!-- icons -->
+    <div class="area-two-icons" *ngFor="let image of iconsImage;let idx = index" [ngStyle]="{'right': getPosition(idx)+'%'}">
+      <img src='{{image.imagesrc}}' title="{{image.imageTitle}}" (click)="levelOneClick(image.value)">
+    </div>
+  </div>
+</div>
+<!-- 第三行 -->
+<!-- 功能列的第二層 -->
+  <nav mat-tab-nav-bar mat-align-tabs="end" animationDuration="0ms">
+    <a mat-tab-link *ngFor="let link of navLinks"
+      [routerLink]="['/admin/'+link.path]"
+      routerLinkActive #rla="routerLinkActive"
+      [active]="rla.isActive">
+      <b [ngStyle]="{'color': changeColor(rla.isActive)}">{{link.name}}</b>
+    </a>
+  </nav>
+<router-outlet></router-outlet>

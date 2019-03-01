@@ -7,6 +7,7 @@ import { MatNativeDateModule, MatSnackBarModule, MatDialogModule, MatAutocomplet
 import { MatMenuModule, MatSidenavModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     MatMenuModule,
     MatSidenavModule,
+    RouterModule,
   ],
   declarations: [],
   imports: [

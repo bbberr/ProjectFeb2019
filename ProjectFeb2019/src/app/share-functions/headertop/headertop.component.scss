@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 .areaOne{
   background-color: #16BA99;
   max-height: 10%;
@@ -48,3 +49,61 @@
 .login-logout{
   color: white;
 }
+
+.areaTwo{
+  background-color: #4A4A4A;
+  // max-height: 10%;
+  min-height: 8%;
+}
+
+.breadcrumb-One{
+  color: white;
+  padding: 4.5px;
+  line-height:30px;
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 9px;
+  // background-color: antiquewhite;
+}
+
+.breadcrumb-Two{
+  color: #16BA99;
+  padding: 4.5px;
+  line-height:30px;
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 9px;
+  // background-color: yellowgreen;
+}
+
+.breadcrumb-slash{
+  color: white;
+  padding: 2px;
+  line-height:35px;
+  display: inline-block;
+  vertical-align: bottom;
+  // background-color: rgb(106, 136, 47);
+}
+
+.areaTwo img{
+  max-height: 30px;
+  // position: absolute;
+  // right: 25%;
+}
+
+.area-two-icons{
+  position: absolute;
+  padding: 8px;
+  line-height:35px;
+  display: inline-block;
+  vertical-align: bottom;
+  // padding:7.5px;
+}
+.area-two-icons:hover{
+  background-color:  #808080;
+}
+
+// ::ng-deep .tabs .mat-tab-list .mat-tab-labels {
+//   // display: none;
+//   color: #16BA99;
+// }
