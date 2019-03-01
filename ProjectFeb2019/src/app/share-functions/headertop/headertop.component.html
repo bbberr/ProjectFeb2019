@@ -38,12 +38,32 @@
 </div>
 <!-- 第三行 -->
 <!-- 功能列的第二層 -->
-  <nav mat-tab-nav-bar mat-align-tabs="end" animationDuration="0ms">
-    <a mat-tab-link *ngFor="let link of navLinks"
-      [routerLink]="['/admin/'+link.path]"
-      routerLinkActive #rla="routerLinkActive"
-      [active]="rla.isActive">
-      <b [ngStyle]="{'color': changeColor(rla.isActive)}">{{link.title}}</b>
-    </a>
-  </nav>
+<nav mat-tab-nav-bar mat-align-tabs="end" animationDuration="0ms" >
+  <mat-tab-group style="height: 8.5%;">
+    <mat-tab *ngFor="let tab of navLinks" label={{tab.title}} >
+
+      <ng-template mat-tab-label>
+        <a *ngIf="tab.menu">
+          <a mat-tab-link [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()" style="width: 100% !important; color:black!important">
+            <b >{{tab.title}}</b>
+          </a>
+        </a>
+        <a *ngIf="!tab.menu">
+          <a mat-tab-link [routerLink]="['/admin/'+tab.path]" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" >
+            <b [ngStyle]="{'color': changeColor(rla.isActive)}">{{tab.title}}</b>
+          </a>
+        </a>
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item *ngFor="let tab2 of tab.menu">
+            <a mat-tab-link [routerLink]="['/admin/'+tab2.path]" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" >
+              {{tab2.title}}
+            </a>
+          </button>
+        </mat-menu>
+      </ng-template>
+
+    </mat-tab>
+  </mat-tab-group>
+</nav>
 <router-outlet></router-outlet>

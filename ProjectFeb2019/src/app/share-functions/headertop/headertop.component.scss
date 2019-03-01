@@ -103,21 +103,10 @@
   background-color:  #808080;
 }
 
-// ::ng-deep .tabs .mat-tab-list .mat-tab-labels {
-//   // display: none;
-//   color: #16BA99;
-// }
-.mat-tab-label{
-  padding: 0px !important;
+// 底線樣式 不能刪除
+::ng-deep .mat-ink-bar {
+  background-color:white !important;
 }
-// .mat-tab-label-container {
-//   .mat-tab-label  {
-//       opacity: 1 !important;
-//       padding: 0 !important;
-//   }
-// }
-// .mat-tab-group.mat-primary {
-//    .mat-ink-bar {
-//         display: none !important;
-//     }
-// }
+::ng-deep .mat-tab-group  .mat-ink-bar {
+  background-color:#16BA99 !important;
+}
