@@ -71,4 +71,11 @@ export class HeadertopComponent implements OnInit {
     }
   }
 
+  underlineShow(click: any) {
+    // if (click) {
+    //   return 'window.dispatchEvent(new Event(\'resize\'))';
+    // }
+    alert(click);
+  }
+
 }

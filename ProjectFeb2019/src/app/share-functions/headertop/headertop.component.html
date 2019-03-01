@@ -38,25 +38,25 @@
 </div>
 <!-- 第三行 -->
 <!-- 功能列的第二層 -->
-<nav mat-tab-nav-bar mat-align-tabs="end" animationDuration="0ms" >
+<nav mat-tab-nav-bar mat-align-tabs="end" animationDuration="0ms">
   <mat-tab-group style="height: 8.5%;">
-    <mat-tab *ngFor="let tab of navLinks" label={{tab.title}} >
+    <mat-tab *ngFor="let tab of navLinks">
 
       <ng-template mat-tab-label>
         <a *ngIf="tab.menu">
-          <a mat-tab-link [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()" style="width: 100% !important; color:black!important">
-            <b >{{tab.title}}</b>
+          <a mat-tab-link [matMenuTriggerFor]="menu" #m (click)="$event.stopPropagation();" style="width: 100% !important;">
+            <b [ngStyle]="{'color': changeColor([matMenuTriggerFor])}">{{tab.title}}22222</b>
           </a>
         </a>
         <a *ngIf="!tab.menu">
-          <a mat-tab-link [routerLink]="['/admin/'+tab.path]" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" >
-            <b [ngStyle]="{'color': changeColor(rla.isActive)}">{{tab.title}}</b>
+          <a mat-tab-link [routerLink]="['/admin/'+tab.path]" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+            <b [ngStyle]="{'color': changeColor(rla.isActive)}">{{tab.title}}1111</b>
           </a>
         </a>
 
         <mat-menu #menu="matMenu">
           <button mat-menu-item *ngFor="let tab2 of tab.menu">
-            <a mat-tab-link [routerLink]="['/admin/'+tab2.path]" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" >
+            <a mat-tab-link [routerLink]="['/admin/'+tab2.path]" routerLinkActive #cli="routerLinkActive" [active]="cli.isActive">
               {{tab2.title}}
             </a>
           </button>
