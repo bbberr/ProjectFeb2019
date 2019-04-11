@@ -36,16 +36,19 @@ export class HeadertopComponent implements OnInit {
   }
   putLinks() {
     this.navLinks.push(
-      {
-        'path': '#', 'title': '郵件',
-        'menu': [
-          { 'path': '/P1001', 'title': 'Apples' },
-          { 'path': '/P1001', 'title': 'Bananas' },
-          { 'path': '/P1001', 'title': 'Kiwi' },
-          { 'path': '/P1001', 'title': 'Pears' }
-        ]
-      },
-      { 'path': '/P1002', 'title': '設定' }
+      // tab裡面增加下拉選單 失敗
+      // {
+      //   'path': '#', 'title': '郵件',
+      //   'menu': [
+      //     { 'path': '/P1001', 'title': 'Apples' },
+      //     { 'path': '/P1001', 'title': 'Bananas' },
+      //     { 'path': '/P1001', 'title': 'Kiwi' },
+      //     { 'path': '/P1001', 'title': 'Pears' }
+      //   ]
+      // },
+      // { 'path': '/P1002', 'title': '設定' }
+      { 'path': '/P1001', 'title': 'P1001Title' },
+      { 'path': '/P1002', 'title': 'P1002Title' }
     );
   }
 
@@ -58,7 +61,7 @@ export class HeadertopComponent implements OnInit {
   }
 
   levelOneClick(value: string) {
-    console.log(value);
+    // console.log(value);
     alert(value);
   }
 
