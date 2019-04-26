@@ -70,7 +70,7 @@ export class HeadertopComponent implements OnInit {
   changeColor(click: any) {
     // console.log(click);
     if (click) {
-      return '#16BA99';
+      return '#0c7a96';
     } else {
       return '#808080';
     }

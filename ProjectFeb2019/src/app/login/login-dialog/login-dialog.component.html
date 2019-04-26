@@ -1,3 +1,38 @@
-<p>
+<!-- <p>
   login-dialog works!
-</p>
+</p> -->
+<!-- <mat-card>
+  <mat-card-header>Login</mat-card-header>
+  <mat-card-content>sodoasdoasodaosdoasdoasod</mat-card-content>
+  <mat-card-actions>
+    <button mat-button >登入</button>
+    <button mat-button >忘記密碼?</button>
+  </mat-card-actions>
+</mat-card> -->
+
+<div style="text-align: center">
+  <h2>會員登入</h2>
+</div>
+<div style="text-align: center">
+  <mat-form-field appearance="outline" style="width:80%">
+    <mat-label>帳號</mat-label>
+    <input matInput placeholder="請輸入帳號">
+    <!-- <mat-hint>Hint</mat-hint> -->
+  </mat-form-field>
+</div>
+<br>
+<div style="text-align: center">
+  <mat-form-field appearance="outline" style="width:80%">
+    <mat-label>密碼</mat-label>
+    <input matInput placeholder="請輸入密碼">
+    <mat-hint><a style="color: red" [routerLink]="['/admin/forgetpassword']">忘記密碼?</a></mat-hint>
+  </mat-form-field>
+</div>
+<div style="text-align: center;padding: 60px 0px">
+  <span style="padding:60px 20px">
+    <button mat-raised-button color="primary">登入</button>
+  </span>
+  <span style="padding: 20px">
+    <button mat-raised-button >註冊</button>
+  </span>
+</div>

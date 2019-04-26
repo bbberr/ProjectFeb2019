@@ -4,7 +4,7 @@
 }
 
 .areaOne{
-  background-color: #16BA99;
+  background-color: #0c7a96;
   max-height: 10%;
 }
 
@@ -55,9 +55,17 @@
 }
 
 .areaTwo{
-  background-color: #4A4A4A;
+  background-color: rgb(160, 157, 157);
   // max-height: 10%;
   min-height: 8%;
+}
+.areaTwo img{
+  max-height: 30px;
+  // position: absolute;
+  // right: 25%;
+}
+.areaTwo img:hover{
+  cursor: pointer;
 }
 
 .breadcrumb-One{
@@ -71,7 +79,7 @@
 }
 
 .breadcrumb-Two{
-  color: #16BA99;
+  color:#0c7a96;
   padding: 4.5px;
   line-height:30px;
   display: inline-block;
@@ -89,11 +97,6 @@
   // background-color: rgb(106, 136, 47);
 }
 
-.areaTwo img{
-  max-height: 30px;
-  // position: absolute;
-  // right: 25%;
-}
 
 .area-two-icons{
   position: absolute;
@@ -107,10 +110,18 @@
   background-color:  #808080;
 }
 
-// 底線樣式 不能刪除
+// mat-tab底線樣式 不能刪除
 ::ng-deep .mat-ink-bar {
   background-color:white !important;
 }
 ::ng-deep .mat-tab-group  .mat-ink-bar {
-  background-color:#16BA99 !important;
+  background-color:#0c7a96!important;
+}
+
+//mat-tab 點擊前&後樣式 不能刪除
+::ng-deep div .mat-tab-label.mat-ripple.ng-star-inserted.mat-tab-label-active{
+width: 160px !important;
+}
+::ng-deep div .mat-tab-label.mat-ripple.ng-star-inserted{
+width: 160px !important;
 }
