@@ -11,7 +11,7 @@
     <a class="user-detail">Hi, 王一飛(DS, DSM)</a>
   </span>
   <!-- LOGIN -->
-  <span class="areaOne-align-right5">
+  <span class="areaOne-align-right5" (click)="loginDialog()" >
     <img src=".\assets\images\login-16.png">
     <a class="login-logout">登入</a>
   </span>
@@ -40,31 +40,6 @@
 <!-- 第三行 -->
 <!-- 功能列的第二層 -->
 <nav mat-tab-nav-bar mat-align-tabs="end" animationDuration="0ms">
-  <!-- tab裡面增加下拉選單 失敗 -->
-  <!-- <mat-tab *ngFor="let tab of navLinks">
-      <ng-template mat-tab-label>
-        <a *ngIf="tab.menu">
-          <a mat-tab-link [matMenuTriggerFor]="menu"  (click)="$event.stopPropagation();" [routerLink]="['/admin/']"
-            routerLinkActive #m="routerLinkActive" [active]="m.isActive"
-            [ngStyle]="{'color': changeColor(m.isActive)}">{{tab.title}}22222
-          </a>
-        </a>
-        <a *ngIf="!tab.menu">
-          <a mat-tab-link [routerLink]="['/admin/'+tab.path]"
-           routerLinkActive #rla="routerLinkActive" [active]="rla.isActive"
-             [ngStyle]="{'color': changeColor(rla.isActive)}">{{tab.title}}
-          </a>
-        </a>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item *ngFor="let tab2 of tab.menu">
-            <a mat-tab-link [routerLink]="['/admin/'+tab2.path]"
-            routerLinkActive #cli="routerLinkActive" [active]="cli.isActive">
-              {{tab2.title}}
-            </a>
-          </button>
-        </mat-menu>
-      </ng-template>
-    </mat-tab>-->
   <mat-tab-group style="height: 8.5%;">
     <mat-tab *ngFor="let tab of navLinks">
       <ng-template mat-tab-label>

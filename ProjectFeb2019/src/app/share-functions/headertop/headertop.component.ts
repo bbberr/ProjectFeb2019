@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { template } from '@angular/core/src/render3';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { LoginDialogComponent } from 'src/app/login/login-dialog/login-dialog.component';
 
 @Component({
   selector: 'app-headertop',
@@ -9,13 +12,12 @@ import { template } from '@angular/core/src/render3';
 export class HeadertopComponent implements OnInit {
   iconsImage: any[] = [];
   positionValue: number;
-  // match = {};
   navLinks: any[] = [];
 
-  constructor() {
-    // this.match['img'] = this.positionValue;
-    // this.match['img2'] = this.positionValue;
-    // this.match['matchWrapperWidth'] = 100;
+  constructor(
+    private router: Router,
+    public dialog: MatDialog
+  ) {
   }
 
   ngOnInit() {
@@ -36,17 +38,6 @@ export class HeadertopComponent implements OnInit {
   }
   putLinks() {
     this.navLinks.push(
-      // tab裡面增加下拉選單 失敗
-      // {
-      //   'path': '#', 'title': '郵件',
-      //   'menu': [
-      //     { 'path': '/P1001', 'title': 'Apples' },
-      //     { 'path': '/P1001', 'title': 'Bananas' },
-      //     { 'path': '/P1001', 'title': 'Kiwi' },
-      //     { 'path': '/P1001', 'title': 'Pears' }
-      //   ]
-      // },
-      // { 'path': '/P1002', 'title': '設定' }
       { 'path': '/P1001', 'title': 'P1001Title' },
       { 'path': '/P1002', 'title': 'P1002Title' }
     );
@@ -62,7 +53,18 @@ export class HeadertopComponent implements OnInit {
 
   levelOneClick(value: string) {
     // console.log(value);
+    if (value === 'home') {
+      this.router.navigate(['/admin']);
+    }
     alert(value);
+  }
+
+  loginDialog() {
+    this.dialog.open(LoginDialogComponent, {
+      width: '500px',
+      height: '500px',
+    }
+    );
   }
 
   changeColor(click: any) {

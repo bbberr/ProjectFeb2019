@@ -40,14 +40,18 @@
   padding: 14px;
   // background-color: grey
 }
+.areaOne-align-right5:hover{
+  cursor: pointer;
+  transform:scale(1.3);
+}
+.areaOne-align-right5 .login-logout{
+  color: white;
+}
+
 
 .user-detail{
   color: white;
   // background-color: grey
-}
-
-.login-logout{
-  color: white;
 }
 
 .areaTwo{

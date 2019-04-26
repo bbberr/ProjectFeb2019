@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeadertopComponent } from '../headertop.component';
 import { ShareMaterialModule } from 'src/app/share-material/share-material.module';
-import { LoginModule } from 'src/app/login/module/login.module';
+import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    ShareMaterialModule,
-    LoginModule,
+    ShareMaterialModule
   ],
   exports: [
-    HeadertopComponent
+    LoginDialogComponent,
   ],
   declarations: [
-    HeadertopComponent
+    LoginDialogComponent
   ],
-
+  entryComponents: [
+    LoginDialogComponent
+  ]
 })
-export class HeadertopModule { }
+export class LoginModule { }
