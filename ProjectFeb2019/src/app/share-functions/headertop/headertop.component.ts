@@ -63,6 +63,7 @@ export class HeadertopComponent implements OnInit {
     this.dialog.open(LoginDialogComponent, {
       width: '500px',
       height: '500px',
+      disableClose: true
     }
     );
   }
