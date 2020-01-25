@@ -21,11 +21,11 @@ export class ForgetpasswordComponent implements OnInit {
   }
   backToLoginDialog() {
     this.dialog.closeAll();
-    this.dialog.open(LoginDialogComponent, {
-      width: '500px',
-      height: '500px',
-      disableClose: true,
-    }
-    );
+    // this.dialog.open(LoginDialogComponent, {
+    //   width: '500px',
+    //   height: '500px',
+    //   disableClose: true,
+    // }
+    // );
   }
 }
