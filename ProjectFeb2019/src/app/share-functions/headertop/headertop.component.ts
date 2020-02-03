@@ -30,10 +30,10 @@ export class HeadertopComponent implements OnInit {
   putIcons() {
     this.iconsImage.push(
       { 'imagesrc': '.\\assets\\images\\navIcon-Home.png', 'imageTitle': '首頁', 'value': 'home' },
-      { 'imagesrc': '.\\assets\\images\\navIcon-Dict.png', 'imageTitle': '資料字典維護', 'value': 'dict' },
-      { 'imagesrc': '.\\assets\\images\\navIcon-DataList.png', 'imageTitle': '血緣衝擊分析', 'value': 'dataList' },
-      { 'imagesrc': '.\\assets\\images\\navIcon-DataSearch.png', 'imageTitle': '差異比對', 'value': 'dataSearch' },
-      { 'imagesrc': '.\\assets\\images\\navIcon-Setting.png', 'imageTitle': '系統管理', 'value': 'Setting' },
+      { 'imagesrc': '.\\assets\\images\\navIcon-Dict.png', 'imageTitle': '字典', 'value': 'dict' },
+      { 'imagesrc': '.\\assets\\images\\navIcon-DataList.png', 'imageTitle': '資料', 'value': 'dataList' },
+      { 'imagesrc': '.\\assets\\images\\navIcon-DataSearch.png', 'imageTitle': '查詢', 'value': 'dataSearch' },
+      { 'imagesrc': '.\\assets\\images\\navIcon-Setting.png', 'imageTitle': '設定', 'value': 'Setting' },
     );
   }
   putLinks() {
